@@ -1,0 +1,231 @@
+extends layout
+
+block layout-content
+	<!-- Heading Section -->
+	div.header-wrapper#header-wrapper
+		div.header#header
+			div.brand#brand
+				button.btn.homeicon(onclick="myfunction()")#homeicon
+					a(href="#introduction")
+						img.home-picture(src="/images/greg-naruto.png" width="45px" height="50px")
+			div.nav#nav
+				ul
+					li
+						a(href="#about") About
+					li
+						a(href="#work-header") Work
+					li
+						a(href="#project-header") Projects
+					li
+						a(href="#contact-me-section") Contact Me
+					li
+						a(href="/resume.pdf" target="_blank")
+							button.btn.resume Resume
+			div.hamburger-icon#hamburger-icon
+				div.bar1
+				div.bar2
+				div.bar3
+	div.menue#menue
+		ul.mobile-menue
+			li
+				a(href="#about") About
+			li
+				a(href="#work-experience") Work
+			li
+				a(href="#project-header") Projects
+			li
+				a(href="#contact-me-section") Contact Me
+			li
+				a(href="/resume.pdf" target="_blank")
+					button.btn.resume Resume
+	div.content#content
+		<!-- Contact Me Modal -->
+		div.modal#myModal
+			div.modal-content
+				div.contact-modal-header
+					span.close x
+				div.modal-elements
+					<label for="fname">First name:</label>
+					<input type="text" id="fname" name="fname">
+					<label for="lname" class="lname">Last name:</label>
+					<input type="text" id="lname" name="lname">
+				div.contact-modal-message
+					<textarea id="modal-message" class="modal-message" placeholder="Write your message here!"></textarea>
+				div.contact-modal-footer
+					button.btn.call-to-action Send
+
+
+		<!-- Introduction Section -->
+		div.introduction#introduction
+			div.introduction-text
+				h1.hacker-text Hello, I'm
+				h1.big-heading Gregory Whitman
+				h1.secondary-text Full Stack Developer
+				button.btn.call-to-action#myBtn Contact Me
+
+
+		<!-- About Section --> 
+		div.about#about.fade-in.silde-in.from-bottom
+			div.about-header.section-header
+				h1.header-text About Me
+			div.about-body-wrapper
+				div.about-body
+					<p> Hi! My name is Gregory and I enjoy building solutions to both simple and complex problems. </p>
+					<p> The problem solving process has always fascinated me. Which has led me down the path of becoming a Full Stack Developer. </p>
+					<p> My interests surpass web development and have recently entered into the realms of game development, writing bots for automation, and exploring the world of engineering. </p>
+					<p> Each of these provide their own unique problems and soultions which feeds my evergrowing desire to learn and understand more! </p>
+				div.about-picture
+					img(src="/images/greg-naruto.png" width="300px" height="330px")
+
+
+		<!-- Work Experience Section -->
+		div.work-experience#work-experience.fade-in
+			div.wrapper
+				div.work-header#work-header
+					h1.header-text Where I've Worked
+				div.carasel-outer
+					div.carasel-inner
+						div.tabs
+							div.tab-list
+								ul
+									li.job-selector.selected(data="0") DMS
+									li.job-selector(data="1") PushPros
+						div.job1
+							div.job-title1
+								div.job-header1
+									.h2
+										span.job-header-title Full Stack Web Developer 
+											span.job-header-company @ Digital Media Solutions
+								div.job-header1-sub
+										span February 2021 - Present
+							div.job-body1
+								ul
+									li Designed and built a system to track statistical anomalies across various business metrics to alert proper team members to investigate the cause of these anomalies.
+									li Integrated NodeJS applications with AWS services such as S3 and cloudwatch.
+									li Built new features on top of the existing REST API.
+									li Gained hands on experience using AWS services such as EC2.
+									li Designed and built U/I that interacts and modifies data via APIs and SQL queries to assist team members with completing buisness tasks.
+									li Built multiple recurring emails using NodeJS and SendGrid that contained vital information about the buisnesses recent performance.
+									li Gained experience working with AWS services such as Gateway and Lambda.
+									li Maintained various NodeJS applications.
+
+
+		<!-- Projects Section -->
+		div.projects
+			div.projects-wrapper
+				div.section-header#project-header.fade-in
+					h1.header-text What I've Built
+				div.project.slide-in.from-left
+					div.project-sm-header
+						span Featured Project
+					div.project-title
+						h1 newsbriefs.us
+					div.project-body
+						<p> A simple news site that updates content daily by scraping the web with Puppetteer. With this project, I wanted to explore everything that goes into hosting a site. </p>
+						ul.project-tools
+							li AWS EC2
+							li AWS Route 53
+							li Certbot
+							li Puppetteer
+							li Bootstrap
+							li NodeJS
+							li Express
+							li Nginx
+							li Pm2
+					div.project-footer
+						a(href="https://github.com/gw7088/newsbriefs.us" target="_blank")
+							<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link">
+								<title>GitHub</title>
+								<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+							</svg>
+						a(href="https://newsbriefs.us" target="_blank")
+							<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link project-link">
+								<title>External Link</title>
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+								<polyline points="15 3 21 3 21 9"></polyline>
+								<line x1="10" y1="14" x2="21" y2="3"></line>
+							</svg>
+				div.project.slide-in.from-right
+					div.project-sm-header
+						span Featured Project
+					div.project-title
+						h1 Genetic Algorithm Research
+					div.project-body
+						<p> Researching genetic algorithms <em>applied to pathfinding</em>, specifically the effect of Second Chance Mating within the selection portion of the algorithm. This project includes a visual demo, a presentation that dives into genetic algorithms, and finally a research paper that concludes my findings. </p>
+						ul.project-tools
+							li Java
+							li Processing
+							li Eclipse
+					div.project-footer
+						a(href="https://github.com/gw7088/SCGA" target="_blank")
+							<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link">
+								<title>GitHub</title>
+								<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+							</svg>
+						a(href="https://newsbriefs.us" target="_blank")
+							<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link project-link">
+								<title>External Link</title>
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+								<polyline points="15 3 21 3 21 9"></polyline>
+								<line x1="10" y1="14" x2="21" y2="3"></line>
+							</svg>
+						a(href="/scga_slides.pdf" target="_blank")
+							svg.project-link(width="26px", height="26px")
+								<title>Slides</title>
+								use(xlink:href="/images/slides.svg#slides")
+						a(href="/scga_paper.pdf" target="_blank")
+							svg.project-link(width="26px", height="26px")
+								<title>Paper</title>
+								use(xlink:href="/images/paper.svg#paper")
+				//- div.project.slide-in.from-left
+				//- 	div.project-sm-header
+				//- 		span Featured Project
+				//- 	div.project-title
+				//- 		h1 Project #3
+				//- 	div.project-body
+				//- 		<p>
+				//- 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus mi sed ante finibus imperdiet. Maecenas non viverra velit, in pulvinar dolor. Sed aliquam neque at ex fermentum, ac feugiat massa.
+				//- 		</p>
+				//- 		<p>
+				//- 			Tool Tool Tool Tool Tool Tool Tool
+				//- 		</p>
+				//- 	div.project-footer
+				//- 		svg.project-icon(width="42px", height="40px")
+				//- 			use(xlink:href="/images/homeicon.svg#homeicon")
+				//- 		svg.project-icon(width="42px", height="40px")
+				//- 			use(xlink:href="/images/homeicon.svg#homeicon")
+				//- 		svg.project-icon(width="42px", height="40px")
+				//- 			use(xlink:href="/images/homeicon.svg#homeicon")
+			div.project-see-more
+				button.btn.call-to-action See More?
+
+
+		<!-- Contact Me Section --> 
+		.contact-me-section#contact-me-section.fade-in
+			div.contact-header
+				h1 Reach out to me!
+			div.contact-body
+				<p> My inbox is always open. Let me know if you have any questions. I’ll do my best to get back to you! </p>
+			button.btn.call-to-action#myBtn2 Say Hello!
+
+
+		<!-- Footer Section --> 
+		div.footer
+			div.personal-links
+				a.project-icon(href="https://www.linkedin.com/in/gregory-whitman/" target="_blank")
+					<svg xmlns="http://www.w3.org/2000/svg" class="footer-link" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+						<title>LinkedIn</title>
+						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+						<rect x="2" y="9" width="4" height="12"></rect>
+						<circle cx="4" cy="4" r="2"></circle>
+					</svg>
+				a.project-icon(href="https://github.com/gw7088" target="_blank")
+					<svg xmlns="http://www.w3.org/2000/svg" class="footer-link" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+						<title>Personal GitHub</title>
+						<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+					</svg>
+			div.closing
+				span Designed and built by Gregory Whitman
+
+	link(rel='stylesheet', href='/stylesheets/index.css', type='text/css')
+	script(src="/javascripts/index.js")

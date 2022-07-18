@@ -1,0 +1,669 @@
+.View.WelcomeView{
+  background-color: #0a192f;
+}
+
+
+
+/**
+  General CSS.
+*/
+.section-header{
+  padding: 1.5rem;
+}
+.content{
+  transition: all 250ms ease-in 0s;
+}
+.call-to-action{
+  margin: 15px;
+  padding: .75rem;
+  box-sizing: border-box;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: 'Coda', cursive;
+  font-weight: 300;
+}
+.call-to-action:focus{
+  box-shadow: none;
+}
+.call-to-action:hover{
+  background-color: #2c576999;
+  color: #64ffda99;
+  transition: 250ms ease-in;
+}
+
+
+
+/**
+  Modal 
+*/
+.modal-btn{
+  margin-top: 15vh;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {	
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #64ffda; 
+  background: #0a192f;
+}
+.close {
+  color: #64ffda;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #64ffda99;
+  text-decoration: none;
+  cursor: pointer;
+}
+.contact-modal-header{
+  margin-bottom: 1rem;
+}
+.modal-elements{
+  margin: auto;
+}
+.modal-info{
+  display:flex;
+  align-items: center;
+  text-align: center;
+}
+#lname,
+#fname,
+.modal-message{
+  background: inherit;
+  color: #64ffda;
+  outline: none;
+  border: solid;
+  border-radius: 5px;
+  border-color: #64ffda;
+  border-width: 1px;
+}
+.contact-modal-message textarea{
+  height: 40vh;
+  width: 50vw;
+}
+.lname{
+  margin-left: 1rem;
+}
+.contact-modal-message{
+  text-align:center; margin: 4rem;
+}
+.contact-modal-footer{
+  text-align: right;
+}
+
+
+
+/**
+  Nav bar.
+*/
+.header-wrapper{
+  backdrop-filter: blur(2px);
+  background-color: #0a192fb5;
+  position: fixed;
+  width: 100vw;
+  transition: .4s;
+  z-index: 999999;
+}
+.header{
+  margin: 20px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  transition: top 0.8s;
+}
+.header a{
+  text-decoration: none;
+}
+.brand{
+  align-items: center;
+}
+.homeicon:focus{
+  outline: none;
+  box-shadow: none;
+}
+.home-picture{
+  border-radius: 250px;
+}
+.nav ul{
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav ul a{
+  font-family: 'Coda', cursive;
+  color: #64ffda
+}
+.nav ul a:hover,
+.menue .mobile-menue li a:hover{
+  color: #64ffda99;
+  text-decoration: none;
+  transition: 250ms ease-in;
+}
+.nav ul li{
+  padding: 5px;
+  margin-left: 20px;
+}
+.hamburger-icon{
+  margin: auto 0;
+  display: none;
+}
+.hamburger-icon .bar1,
+.hamburger-icon .bar2,
+.hamburger-icon .bar3{
+  width: 35px;
+  height: 3px;
+  background-color: #64FFDA;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.menue{
+  transform: translateX(100vw);
+  transition: 250ms ease-in;
+  position: absolute;
+  right: 0;
+  width: 63vw;
+  height: 100vh;
+  background-color: #112240;
+  display: none;
+}
+.menue .mobile-menue{
+  margin-top: 30vh;
+  list-style: none;
+  display: inherit;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: inherit;
+  width: inherit;
+}
+.menue .mobile-menue li{
+  color: #64FFDA;
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 10px;
+}
+.menue .mobile-menue li a{
+  font-family: 'Coda', cursive;
+  color: #64FFDA;
+}
+.resume {
+  box-sizing: border-box;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  font-family: 'Coda', cursive;
+}
+.resume:focus{
+  box-shadow: none;
+}
+.resume:hover{
+  background-color: #2c576999;
+  color: #64ffda99;
+  transition: 250ms ease-in;
+}
+
+
+
+/**
+  Introduction section.
+*/
+.introduction{
+  display: flex;
+  flex: 0 1 40vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.big-heading{
+  font-family: 'Murecho', sans-serif;
+  font-weight: bold;
+  font-size: clamp(40px, 8vw, 60px);
+  color: #CCD6F6;
+  text-transform: none;
+}
+.hacker-text{
+  font-family: 'Coda', cursive;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-weight: 300;
+  font-size: clamp(40px, 8vw, 60px);
+  color: #64FFDA;
+  text-transform: none;
+}
+.header-text{
+  font-family: 'Murecho', sans-serif;
+  font-weight: bold;
+  font-size: clamp(26px,5vw,32px);
+  color: #CCD6F6;
+  text-transform: none;
+}
+.secondary-text{
+  font-family: 'Murecho', sans-serif;
+  font-weight: bold;
+  font-size: clamp(40px, 8vw, 60px);
+  color: #8892B0;
+  text-transform: none;
+}
+
+
+
+/**
+  About Section.
+*/
+.about{
+  margin-bottom: 5rem;
+}
+.about-header{
+  padding-left: 15vw;
+}
+.about-body{
+  color: #99A4C2;
+  font-family: 'Murecho', sans-serif;
+  text-align: left;
+  padding: .5rem 15vw;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 23px;
+}
+.about-picture{
+  text-align: center;
+  margin: 1.5rem;
+}
+.about-picture img{
+  border-radius: 250px;
+}
+
+
+
+/**
+  Work Experience Section.
+*/
+.work-experience{
+  margin-bottom: 16vh;
+}
+.work-header{
+  /* padding-left: 21vw; */
+  padding: 20px;
+}
+.job{
+  flex: 0 1 40vw;
+  padding: 1rem 20vw;
+}
+.job-header > .h2{
+  font-weight: 400;
+  text-transform: none;
+}
+.job-header-title{
+  color: #CCD6F6; 
+}
+.job-header-company{
+  color:#64FFDA;
+}
+.job-subtitle{
+  font-family: 'Coda', cursive;
+  color: #99A4C2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 1rem;
+}
+.job-body{
+  color: #99A4C2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+.wrapper{
+  /* display: flex;
+  flex: 0 1 40vw; */
+  height: auto;
+  justify-content: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 750px;
+  /* height: 500px; */
+  margin: 0 auto;
+}
+.carasel-outer{
+  background:	#0a192f;
+  padding: 20px;
+  color: #99a4c2;
+}
+.carasel-inner{
+  display: flex;
+}
+.tabs{
+  display: flex;
+  margin-right: 1.5rem;
+}
+.tab-list ul {
+  list-style: none;
+  padding: 0px;
+}
+.tab-list ul li {
+  list-style: none;
+  padding: 1rem;
+  border-left-style: solid;
+  border-color: #09254d;
+}
+.tab-list .selected {
+  border-color: #64ffda;
+  background-color: #2c576999;
+  color: #64ffda;
+}
+.tab-list ul li:hover {
+  background-color: #1f404d99;
+}
+.job-header1-sub {
+  font-family: 'Coda', cursive;
+  color: #99A4C2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: .90rem;
+}
+.job-body1 {
+  margin-top: 1rem;
+}
+.job-body1 ul {
+  list-style: circle;
+}
+.job-body1 ul li {
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+
+
+/**
+  Projects Section.
+*/
+.project{
+  padding: 1.5rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  background: #0C2134;
+  box-shadow: 2px 2px 8px rgb(100 255 218 / 40%);
+}
+.projects-wrapper{
+  padding: 0 5vw;
+}
+.project-sm-header{
+  font-family: 'Coda', cursive;
+  font-size: 16px;
+  font-weight: 400;
+  color: #64FFDA;
+}
+.project-title{
+  font-weight: 700;
+  font-size: 31px;
+  color: #E6F1FF;
+}
+.project-body{
+  color: #99A4C2;
+
+}
+.project-icon{
+  margin: 1rem;
+}
+.project-see-more{
+  text-align: center;
+}
+.project-see-more .see-more{
+  margin: 15px;
+  padding: .75rem;
+  box-sizing: border-box;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: 'Coda', cursive;
+  font-weight: 300;
+}
+.project-tools{
+  font-family: 'Coda', cursive;
+  font-size: 13px;
+  list-style: none;
+  text-align: left;
+  padding: 0px;
+}
+.project-tools li{
+  display: inline-block;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+}
+.project-link{
+  margin: 1rem 2.25rem 0 0;
+  width: 26px;
+  height: 26px;
+  color: #ccd6f6;
+}
+.project-link:hover {
+  color: #64FFDA;
+}
+
+
+
+
+/**
+  Contact Section.
+*/
+.contact-me-section{
+  text-align: center;
+  padding: 1.5rem;
+  margin: 2.5rem;
+}
+.contact-header{
+  font-size: 2rem;
+  color: #C7D1F0;
+}
+.contact-body{
+  color: #99a4c2;
+}
+
+
+
+/**
+  Footer Section.
+*/
+.footer{
+  text-align: center;
+  padding-bottom: .75rem;
+}
+.footer-link{
+  width: 26px;
+  height: 26px;
+  color: #ccd6f6;
+}
+.closing{
+  margin-top: 1rem;
+  font-size: 12px;
+  font-weight: 300;
+  color: #A8B2D1;
+}
+
+
+
+/**
+  Fade in animation
+*/
+.fade-in{
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+.fade-in.appear{
+  opacity: 1;
+}
+.from-left{
+  transform: translateX(-50%);
+}
+.from-right{
+  transform: translateX(50%);
+}
+.from-bottom{
+  transform: translateY(202px);
+}
+.from-left, .from-right, .from-bottom{
+  transition: opacity 500ms ease-in, 
+    transform 400ms ease-in;
+  opacity: 0;
+}
+.from-left.appear, .from-right.appear{
+  transform: translateX(0);
+  opacity: 1;
+}
+.from-bottom.appear{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+/**
+  Media queries for large screens.
+*/
+@media (min-width: 992px){
+
+  /**
+    About Section
+  */
+  .about{
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 27vh;
+  }
+  .about-header{
+    text-align: left;
+    padding-left: 20vw;
+  }
+  .about-body-wrapper{
+    display: flex;
+    width: 100vw;
+    padding: 0 20vw 0 20vw;
+  }
+  .about-body, .about-picture{
+    width: 50vw;
+    padding: 0;
+    margin: 0;
+  }
+  .about-picture{
+    padding-left: 1rem;
+  }
+
+  /**
+    Sections
+  */
+  .work-experience{
+    margin-bottom: 20vh;
+  }
+  .projects{
+    padding-bottom: 20vh;
+  }
+  .contact-me-section{
+    padding-bottom: 10vh;
+  }
+}
+
+/**
+  Media queries for desktop/mobile nav
+*/
+@media only screen and (max-width: 600px){
+  .header .nav{
+    display: none;
+  }
+  .hamburger-icon{
+    display: block;
+  }
+  .menue.open{
+    z-index: 9999;
+    display: block;
+    transform: translateX(0);
+    position: fixed;
+  }
+  .content.open{
+    filter: blur(5px) brightness(0.7);
+  }
+  .wrapper{
+    width: 100vw;
+    height: auto;
+    font-size: 1rem;
+  }
+  .work-experience{
+    margin-bottom: 7vh;
+  }
+
+
+  .carasel-inner {
+    flex-direction: column;
+  }
+  .tab-list ul li {
+    display: inline;
+    border-bottom-style: solid;
+    border-left-style: none;
+  }
+  .tabs {
+    margin-bottom: 3rem;
+}
+
+}
+/**
+  Media queries for desktop/mobile nav
+*/
+@media only screen and (max-width: 768px){
+  /**
+    Work experience
+  */
+  .wrapper{
+    width:100vw;
+    font-size:1rem;
+  }
+
+  /**
+    Modal elements
+  */
+  .modal-elements{
+    display: grid;
+    align-items: left;
+    width: 50vw;
+  }
+  .lname{
+    margin-top: 1rem;
+    margin-left: 0px;
+  }
+  .contact-modal-message {
+    margin: 2rem;
+  }
+}
