@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "real": "pm2 start app.js",
+    "real": "pm2 start app.js --name 'gregorywhitman.dev'",
     "start": "pm2 start ./bin/www",
     "test": "nodemon app.js"
   },
@@ -11,6 +11,7 @@
     "@sendgrid/mail": "^7.7.0",
     "cookie-parser": "^1.4.5",
     "debug": "^2.6.9",
+    "dotenv": "^16.0.1",
     "express": "^4.16.4",
     "express-session": "^1.17.2",
     "express-socket.io-session": "^1.3.5",

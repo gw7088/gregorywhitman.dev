@@ -6,8 +6,13 @@ const
     UIDGenerator = require('uid-generator'),
     uidgen = new UIDGenerator(),
     path = require('path'),
-    fs = require('fs')
+    fs = require('fs'),
+    sgMail = require('@sendgrid/mail')
 ;
+
+// Set sendGrid Creds
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 
 module.exports = class Admin extends Utils{
 
@@ -29,22 +34,30 @@ module.exports = class Admin extends Utils{
         let self=this;
         if (typeof callback!='function') callback = function(){};
 
-
-        const sgMail = require('@sendgrid/mail');
-        // sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-        sgMail.setApiKey('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');
+        // console.log('Message contents');
+        // console.log(data);
         const msg = {
-            to: 'test@example.com', // Change to your recipient
-            from: 'test@example.com', // Change to your verified sender
-            subject: 'Sending with SendGrid is Fun',
-            text: 'and easy to do anywhere, even with Node.js',
-            html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+            // to: 'gw@gregorywhitman.dev',
+            to: 'gwhitman55@gmail.com',
+            from: 'gw@gregorywhitman.dev',
+            subject: 'Message From gregorywhitman.dev site',
+            text: `${data.fname}
+                    ${data.lname}
+
+                    ${data.message}
+                `,
+            html: `<strong>${data.fname} : ${data.lname}</strong>
+                    <p>${data.message}</p>
+                `,
         }
         sgMail.send(msg).then(() => {
-            console.log('Email sent');
+            // console.log('Email sent');
+            return callback(self.simpleSuccess('Successfully sent contact email'));
         })
         .catch((error) => {
-            console.error(error);
+            // console.error(error);
+            // console.log(error.response.body);
+            return callback(self.simpleFail('Failed sending contact email'));
         });
     }
 }

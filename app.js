@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var request = require("request");
 var app = express();
-// export SESSION_SECRET='t067t68PxfWbvY8JoGiYZCWJk0FFrOZB'
 var session = require('express-session')({
 	key: 'user_sid',
 	secret: 't067t68PxfWbvY8JoGiYZCWJk0FFrOZB',
@@ -18,10 +17,13 @@ var session = require('express-session')({
 });
 var sharedsession = require("express-socket.io-session");
 
+// Environment Variables
+require('dotenv').config();
+console.log('\n\nRESTARTING gregorywhitman.dev!!!');
 
 const
   admin = new (require('./bin/admin'))
-  port = 8080;
+  port = 8040;
   ;
 
 // Socket.io server

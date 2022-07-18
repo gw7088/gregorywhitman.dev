@@ -3,6 +3,9 @@
  * are clicked or certain events are complete
  */
 function initHandlers(){
+    // Socket message handlers
+    socket.on('contact email sent',onContactEmailSent);
+
     // Setups
     navBarFadeIn();
     transitionAnimations();
@@ -11,16 +14,58 @@ function initHandlers(){
     // Interactions
     $('.hamburger-icon').click(toggleMobileMenu);
     $('.job-selector').click(jobSelector);
+    $('.contact-send').click(send_contact_mail);
 }
 
 
 
 /**
- * Test send mail via sendgrid
+ * Send email via sendgrid, rip data from 
+ * contact modal.
  */
-function testSendMail(){
-    socket.emit('send contact email');
+function send_contact_mail(){
+    let data = {};
+    // Rip message contents from here...
+    data.fname = $('#fname').val();
+    data.lname = $('#lname').val();
+    data.message = $('#modal-message').val();
+    // Send data to server to be sent.
+    socket.emit('send contact email',data);
 }
+
+
+
+/**
+ * Handle u/i based on server response of
+ * sending sendgrid email.
+ */
+function onContactEmailSent(data){
+    // No matter what. Close contact modal.
+    clearAndCloseModal();
+    // If success, show toast alert.
+    if(data.success){
+        console.log('wahoo!');
+    }
+    else{
+        console.log('Uh Oh.');
+    }
+}
+
+
+
+/**
+ * Clears and closes contact modal.
+ */
+function clearAndCloseModal(){
+    // Close contact modal.
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    // Clear contact modal.
+    $('#fname').val('');
+    $('#lname').val('');
+    $('#modal-message').val('');
+}
+
 
 
 /**
