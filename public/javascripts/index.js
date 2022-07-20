@@ -44,10 +44,10 @@ function onContactEmailSent(data){
     clearAndCloseModal();
     // If success, show toast alert.
     if(data.success){
-        console.log('wahoo!');
+        return showToastAlert(data.message);
     }
     else{
-        console.log('Uh Oh.');
+        return showToastError(data.message);
     }
 }
 
@@ -69,17 +69,18 @@ function clearAndCloseModal(){
 
 
 /**
- * Expands Mobile menu
+ * Expands Mobile menu on click.
  */
 function toggleMobileMenu(){
-    if($(this).hasClass('open')){
+    // Check if menue is open.
+    if($(this).hasClass('open')){ // If open. Steps to close it.
         $(this).removeClass('open');
         document.getElementById("menue").classList.remove("open");
         document.getElementById("content").classList.remove("open");
         var header = document.getElementById("header-wrapper");
         header.style.backgroundColor = "rgb(10 25 47 / 71%)";
     }
-    else{
+    else{ // If closes. Steps to open it.
         $(this).addClass('open');
         document.getElementById("menue").classList.add("open");
         document.getElementById("content").classList.add("open");

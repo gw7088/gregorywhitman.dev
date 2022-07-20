@@ -1,0 +1,93 @@
+/**
+    Heading text.
+*/
+.ga-header{
+    color: #64FFDA;
+    text-align: center;
+}
+
+
+
+/**
+    Stats.
+*/
+.stats-wrapper{
+    margin-left: 10vw;
+}
+.stats{
+    color: #64FFDA;  
+}
+.stat p{
+    margin-bottom: 0rem;
+}
+.call-to-action{
+    margin: 15px;
+    box-sizing: border-box;
+    border: 1px solid #64FFDA;
+    color: #64FFDA;
+    font-family: 'Coda', cursive;
+    font-weight: 300;
+}
+.call-to-action:focus{
+    box-shadow: none;
+}
+.call-to-action:hover{
+    background-color: #2c576999;
+    color: #64ffda99;
+    transition: 250ms ease-in;
+}
+
+
+
+/**
+    Hide processing js console.
+*/
+.pjsconsole{
+    display: none !important;
+}
+
+
+
+@media (min-width: 992px){
+    .ga {
+        text-align: center;
+    }
+    .ga-body-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+    }
+    .ga-body, .ga-canvas {
+        margin-top: 2rem;
+    }
+    .ga-canvas {
+        /* padding-left: 1rem; */
+    }
+    .ga-body {
+        padding: 1rem 6rem 1rem 1rem;
+        width: 30vw;
+        margin-left: 0px !important;
+    }
+}
+
+.ga{
+    /* margin-top: 5vh; */
+    height: 100vh;
+}
+.ga-body-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.ga-body {
+    color: #99A4C2;
+    font-family: 'Murecho', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 23px;
+    margin-left: 3rem;
+}
+.ga-canvas {
+    text-align: center;
+}
+

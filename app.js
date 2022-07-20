@@ -44,6 +44,7 @@ httpServer.listen(port, () => {
 const
   indexRouter = require('./routes/index'),
   mainRouter = require('./routes/mainpage'),
+  pathfindingGaRouter = require('./routes/pathfinding-ga'),
   userRouter = require('./routes/user')
   ;
 
@@ -67,6 +68,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Hooking it up
 app.use('/', indexRouter);
 app.use('/main', mainRouter);
+app.use('/pathfinding-ga', pathfindingGaRouter);
 app.use('/user', userRouter);
 
 // catch 404 and forward to error handler
