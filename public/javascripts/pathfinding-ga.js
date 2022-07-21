@@ -9,10 +9,10 @@ function initHandlers(){
     // Rough way to change canvas size to fit devices...
     setTimeout(() => {
         var canvas = document.getElementById("__processing0");
-        canvas.style.width = "80vw";
-        canvas.style.height = "80vw";
-        canvas.style.maxWidth = "600px";
-        canvas.style.maxHeight = "600px";
+        canvas.style.width = "77vw";
+        canvas.style.height = "77vw";
+        canvas.style.maxWidth = "580px";
+        canvas.style.maxHeight = "530px";
         canvas.style.display = "inline-block";
         canvas.style.pointerEvents = "none";
       }, "200");

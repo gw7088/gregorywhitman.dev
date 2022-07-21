@@ -71,12 +71,13 @@
 }
 
 .ga{
-    /* margin-top: 5vh; */
-    height: 100vh;
+    margin-top: 15vh;
 }
 .ga-body-wrapper {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
 }
 .ga-body {
     color: #99A4C2;
@@ -84,8 +85,7 @@
     text-align: left;
     font-weight: 400;
     font-style: normal;
-    line-height: 23px;
-    margin-left: 3rem;
+    justify-content: left;
 }
 .ga-canvas {
     text-align: center;

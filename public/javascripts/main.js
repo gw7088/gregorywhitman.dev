@@ -69,4 +69,79 @@ function showToastError(msg,title){
 		drag: false,
 	});
 }
+
+
+
+/**
+ * Event handelers that call certain methods when certain assets
+ * are clicked or certain events are complete
+ */
+function initMainHandlers(){
+    // Setups
+    navBarFadeIn();
+
+    // Interactions
+    $('.hamburger-icon').click(toggleMobileMenu);
+}
+
+
+
+/**
+ * Expands Mobile menu on click.
+ */
+function toggleMobileMenu(){
+    // Check if menue is open.
+    if($(this).hasClass('open')){ // If open. Steps to close it.
+        $(this).removeClass('open');
+        document.getElementById("menue").classList.remove("open");
+        document.getElementById("content").classList.remove("open");
+        var header = document.getElementById("header-wrapper");
+        header.style.backgroundColor = "rgb(10 25 47 / 71%)";
+    }
+    else{ // If closes. Steps to open it.
+        $(this).addClass('open');
+        document.getElementById("menue").classList.add("open");
+        document.getElementById("content").classList.add("open");
+        var header = document.getElementById("header-wrapper");
+        header.style.backgroundColor = "rgb(210 105 30 / 0%)";
+    }
+}
+
+
+
+/**
+ * Fades Nav Bar in/out from the top of page.
+ */
+function navBarFadeIn(){
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header-wrapper").style.top = "0";
+    } else {
+        if(!$('.hamburger-icon').hasClass('open')){
+            document.getElementById("header-wrapper").style.top = "-100px";
+        }
+    }
+        prevScrollpos = currentScrollPos;
+    }
+}
+
+
+
+/**
+ * All the page requirements that need to be loaded from the start.
+ */
+function initMain(){
+    initMainHandlers();
+}
+
+
+
+/**
+ * Setup everything on page loaded.
+ */
+$(document).ready(function(){
+     initMain();
+});
 	

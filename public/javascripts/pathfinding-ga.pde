@@ -40,14 +40,21 @@ void draw()
     //rect(0, 200, 250, 10);
 
 
-    // U/I updates.
-    document.getElementById("popSize").innerHTML = test.popSize;
-    document.getElementById("genomeLength").innerHTML = test.genomeSize;
-    document.getElementById("generation").innerHTML = test.generation;
-    document.getElementById("avgFitness").innerHTML = nf(((test.fitnessSum / test.popSize) *6000), 0, 6);
-    document.getElementById("minMoves").innerHTML = test.minStep;
+    // U/I updates. (slightly better performance)
+    // document.getElementById("popSize").innerHTML = test.popSize;
+    // document.getElementById("genomeLength").innerHTML = test.genomeSize;
+    // document.getElementById("generation").innerHTML = test.generation;
+    // document.getElementById("avgFitness").innerHTML = nf(((test.fitnessSum / test.popSize) *6000), 0, 6);
+    // document.getElementById("minMoves").innerHTML = test.minStep;
 
     if(document.getElementById('action').classList.contains('started')){
+        // U/I updates.
+        document.getElementById("popSize").innerHTML = test.popSize;
+        document.getElementById("genomeLength").innerHTML = test.genomeSize;
+        document.getElementById("generation").innerHTML = test.generation;
+        document.getElementById("avgFitness").innerHTML = nf(((test.fitnessSum / test.popSize) *6000), 0, 6);
+        document.getElementById("minMoves").innerHTML = test.minStep;
+
         if(test.allDotsDead())
         {
             // GA here

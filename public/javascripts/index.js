@@ -7,20 +7,21 @@ function initHandlers(){
     socket.on('contact email sent',onContactEmailSent);
 
     // Setups
-    navBarFadeIn();
     transitionAnimations();
     setupModalFunc();
 
     // Interactions
-    $('.hamburger-icon').click(toggleMobileMenu);
+    // $('.hamburger-icon').click(toggleMobileMenu);
     $('.job-selector').click(jobSelector);
     $('.project-see-more .call-to-action').click(seeMoreProjectsClicked);
     $('.contact-send').click(send_contact_mail);
 }
 
 
+
 /**
- * 
+ * Button handler for when 'see more' projects btn
+ * clicked
  */
 function seeMoreProjectsClicked(){
     // Check if menue is open.
@@ -82,49 +83,6 @@ function clearAndCloseModal(){
     $('#fname').val('');
     $('#lname').val('');
     $('#modal-message').val('');
-}
-
-
-
-/**
- * Expands Mobile menu on click.
- */
-function toggleMobileMenu(){
-    // Check if menue is open.
-    if($(this).hasClass('open')){ // If open. Steps to close it.
-        $(this).removeClass('open');
-        document.getElementById("menue").classList.remove("open");
-        document.getElementById("content").classList.remove("open");
-        var header = document.getElementById("header-wrapper");
-        header.style.backgroundColor = "rgb(10 25 47 / 71%)";
-    }
-    else{ // If closes. Steps to open it.
-        $(this).addClass('open');
-        document.getElementById("menue").classList.add("open");
-        document.getElementById("content").classList.add("open");
-        var header = document.getElementById("header-wrapper");
-        header.style.backgroundColor = "rgb(210 105 30 / 0%)";
-    }
-}
-
-
-
-/**
- * Fades Nav Bar in/out from the top of page.
- */
-function navBarFadeIn(){
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header-wrapper").style.top = "0";
-    } else {
-        if(!$('.hamburger-icon').hasClass('open')){
-            document.getElementById("header-wrapper").style.top = "-100px";
-        }
-    }
-        prevScrollpos = currentScrollPos;
-    }
 }
     
 
