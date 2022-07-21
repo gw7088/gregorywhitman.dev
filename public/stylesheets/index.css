@@ -344,17 +344,12 @@
   font-weight: 400;
   font-size: 16px;
 }
-
-
 .wrapper{
-  /* display: flex;
-  flex: 0 1 40vw; */
   height: auto;
   justify-content: center;
   padding-right: 1rem;
   padding-left: 1rem;
   width: 750px;
-  /* height: 500px; */
   margin: 0 auto;
 }
 .carasel-outer{
@@ -472,7 +467,56 @@
 .project-link:hover {
   color: #64FFDA;
 }
-
+/* Extra projects */
+.more-projects {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.more-projects.open{
+  opacity: 1;
+  height: auto;
+}
+.extra-projects-heading{
+  margin: 6rem 0 3rem 0;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+.extra-projects-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  position: relative;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.extra-project{
+  background: #112240;
+  box-shadow: 0px 4px 11px rgb(0 0 0 / 40%);
+  transition: transform 200ms ease-in;
+}
+.extra-project:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 11px rgb(0 0 0 / 66%);
+}
+.extra-project-footer{
+  margin: 0 0 2rem 0;
+  position: relative;
+}
+.extra-project-title{
+  
+}
+.extra-project-body{
+  
+}
+.extra-project-tools{
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
 
 
 

@@ -6,18 +6,18 @@ block layout-content
 		div.header#header
 			div.brand#brand
 				button.btn.homeicon#homeicon
-					a(href="#introduction")
+					a(href="/#introduction")
 						img.home-picture(src="/images/greg-naruto.png" width="45px" height="50px")
 			div.nav#nav
 				ul
 					li
-						a(href="#about") About
+						a(href="/#about") About
 					li
-						a(href="#work-header") Work
+						a(href="/#work-header") Work
 					li
-						a(href="#project-header") Projects
+						a(href="/#project-header") Projects
 					li
-						a(href="#contact-me-section") Contact Me
+						a(href="/#contact-me-section") Contact Me
 					li
 						a(href="/resume.pdf" target="_blank")
 							button.btn.resume Resume
@@ -28,13 +28,13 @@ block layout-content
 	div.menue#menue
 		ul.mobile-menue
 			li
-				a(href="#about") About
+				a(href="/#about") About
 			li
-				a(href="#work-experience") Work
+				a(href="/#work-experience") Work
 			li
-				a(href="#project-header") Projects
+				a(href="/#project-header") Projects
 			li
-				a(href="#contact-me-section") Contact Me
+				a(href="/#contact-me-section") Contact Me
 			li
 				a(href="/resume.pdf" target="_blank")
 					button.btn.resume Resume
@@ -177,25 +177,74 @@ block layout-content
 							svg.project-link(width="26px", height="26px")
 								<title>Paper</title>
 								use(xlink:href="/images/paper.svg#paper")
-				//- div.project.slide-in.from-left
-				//- 	div.project-sm-header
-				//- 		span Featured Project
-				//- 	div.project-title
-				//- 		h1 Project #3
-				//- 	div.project-body
-				//- 		<p>
-				//- 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus mi sed ante finibus imperdiet. Maecenas non viverra velit, in pulvinar dolor. Sed aliquam neque at ex fermentum, ac feugiat massa.
-				//- 		</p>
-				//- 		<p>
-				//- 			Tool Tool Tool Tool Tool Tool Tool
-				//- 		</p>
-				//- 	div.project-footer
-				//- 		svg.project-icon(width="42px", height="40px")
-				//- 			use(xlink:href="/images/homeicon.svg#homeicon")
-				//- 		svg.project-icon(width="42px", height="40px")
-				//- 			use(xlink:href="/images/homeicon.svg#homeicon")
-				//- 		svg.project-icon(width="42px", height="40px")
-				//- 			use(xlink:href="/images/homeicon.svg#homeicon")
+				<!-- Extra Projects Section -->
+				div.more-projects#more-projects
+					div.extra-projects-heading
+						p Extra Projects
+					div.extra-projects-wrapper
+						div.project.extra-project
+							div.project-footer.extra-project-footer
+								a(href="https://github.com/gw7088/SCGA" target="_blank")
+									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link">
+										<title>GitHub</title>
+										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+									</svg>
+								a(href="/pathfinding-ga")
+									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link project-link">
+										<title>External Link</title>
+										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+										<polyline points="15 3 21 3 21 9"></polyline>
+										<line x1="10" y1="14" x2="21" y2="3"></line>
+									</svg>
+							div.project-title.extra-project-title
+								h1 Genetic Algorithm: String Matching
+							div.project-body.extra-project-body
+								<p> Yet another application of Genetic Algorithms, but applied to string matching. Employing multiple algorithms to determine the fitness each individual in the population. </p>
+								ul.project-tools.extra-project-tools
+									li Java
+									li Processing
+						div.project.extra-project
+							div.project-footer.extra-project-footer
+								a(href="https://github.com/gw7088/SCGA" target="_blank")
+									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link">
+										<title>GitHub</title>
+										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+									</svg>
+								a(href="/pathfinding-ga")
+									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link project-link">
+										<title>External Link</title>
+										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+										<polyline points="15 3 21 3 21 9"></polyline>
+										<line x1="10" y1="14" x2="21" y2="3"></line>
+									</svg>
+							div.project-title.extra-project-title
+								h1 Genetic Algorithm: String Matching
+							div.project-body.extra-project-body
+								<p> Yet another application of Genetic Algorithms, but applied to string matching. Employing multiple algorithms to determine the fitness each individual in the population. </p>
+								ul.project-tools.extra-project-tools
+									li Java
+									li Processing
+						div.project.extra-project
+							div.project-footer.extra-project-footer
+								a(href="https://github.com/gw7088/SCGA" target="_blank")
+									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link">
+										<title>GitHub</title>
+										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+									</svg>
+								a(href="/pathfinding-ga")
+									<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link project-link">
+										<title>External Link</title>
+										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+										<polyline points="15 3 21 3 21 9"></polyline>
+										<line x1="10" y1="14" x2="21" y2="3"></line>
+									</svg>
+							div.project-title.extra-project-title
+								h1 Genetic Algorithm: String Matching
+							div.project-body.extra-project-body
+								<p> Yet another application of Genetic Algorithms, but applied to string matching. Employing multiple algorithms to determine the fitness each individual in the population. </p>
+								ul.project-tools.extra-project-tools
+									li Java
+									li Processing
 			div.project-see-more
 				button.btn.call-to-action See More?
 

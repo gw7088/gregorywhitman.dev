@@ -44,10 +44,9 @@ void draw()
     document.getElementById("popSize").innerHTML = test.popSize;
     document.getElementById("genomeLength").innerHTML = test.genomeSize;
     document.getElementById("generation").innerHTML = test.generation;
-    // document.getElementById("avgFitness").innerHTML = (test.fitnessSum / test.popSize) *6000;
     document.getElementById("avgFitness").innerHTML = nf(((test.fitnessSum / test.popSize) *6000), 0, 6);
     document.getElementById("minMoves").innerHTML = test.minStep;
-    
+
     if(document.getElementById('action').classList.contains('started')){
         if(test.allDotsDead())
         {

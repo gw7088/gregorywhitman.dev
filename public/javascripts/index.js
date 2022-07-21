@@ -14,7 +14,25 @@ function initHandlers(){
     // Interactions
     $('.hamburger-icon').click(toggleMobileMenu);
     $('.job-selector').click(jobSelector);
+    $('.project-see-more .call-to-action').click(seeMoreProjectsClicked);
     $('.contact-send').click(send_contact_mail);
+}
+
+
+/**
+ * 
+ */
+function seeMoreProjectsClicked(){
+    // Check if menue is open.
+    if($('#more-projects').hasClass('open')){ // If open. Steps to close it.
+        $('#more-projects').removeClass('open');
+        $(this).html('See More?');
+    }
+    else{ // If closes. Steps to open it.
+        $('#more-projects').addClass('open');
+        console.log(this);
+        $(this).html('Hide Projects?');
+    }
 }
 
 
