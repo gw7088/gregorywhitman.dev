@@ -58,7 +58,7 @@
         flex-direction: row !important;
     }
     .ga-body, .ga-canvas {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     .ga-canvas {
         /* padding-left: 1rem; */

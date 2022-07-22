@@ -1,0 +1,136 @@
+#defaultCanvas0{
+    display: none;
+}
+
+
+
+/**
+    GA heading.
+*/
+.ga-sub-header .label{
+    font-size: 12px;
+    margin: 0;
+}
+.ga-sub-header .char-set{
+    font-size: 12px;
+    color: #64ffda;
+}
+
+
+
+/**
+    GA styling
+*/
+.ga{
+    color: #99A4C2;
+    display: flex;
+    flex: 0 1 40vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.ga-body{
+    width: 80vw;
+    max-height: 70vh;
+    overflow-y: hidden;
+}
+.ga-header{
+    color: #ccd6f6;
+}
+.ga-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.ga-population{
+    padding: 1rem;
+    margin: 0 5rem 0 0;
+    overflow-y: hidden;
+
+    max-width: 225px;
+    min-width: 225px;
+}
+.ga-population span{
+    display: block;
+}
+.ga-details{
+    padding: 1rem;
+
+    max-width: 225px;
+    min-width: 225px;
+}
+.ga-scentence, .ga-best-scentence{
+    margin: 0 0 2rem 0;
+}
+.ga-scentence span, .ga-best-scentence span{
+    display: block;
+}
+.ga-stats span{
+    display: block;
+}
+.ga-controls{
+    text-align: center;
+    margin: 1rem 0;
+}
+.scentence-heading{
+    font-size: 20px;
+    color: #ccd6f6;
+}
+.scentence-important{
+    font-size: 24px;
+    color: #64ffda;
+}
+
+
+
+/**
+    btn styling
+*/
+.call-to-action{
+    margin: 15px;
+    box-sizing: border-box;
+    border: 1px solid #64FFDA;
+    color: #64FFDA;
+    font-family: 'Coda', cursive;
+    font-weight: 300;
+}
+.call-to-action:focus{
+    box-shadow: none;
+}
+.call-to-action:hover{
+    background-color: #2c576999;
+    color: #64ffda99;
+    transition: 250ms ease-in;
+}
+
+
+
+/**
+  Media queries for large screens.
+*/
+@media (max-width: 992px){
+    .ga-body {
+        overflow-y: visible;
+    }
+    .ga-sub-header{
+        overflow-wrap: break-word;
+    }
+    .ga-header{
+        margin-top: 3rem;
+    }
+    .ga-wrapper{
+        display: contents;
+        text-align: center;
+    }
+    .ga-population{
+        max-height: 163px;
+        max-width: none;
+        margin: 0 0 2rem 0;
+    }
+    .ga-details {
+        max-width: none;
+    }
+}

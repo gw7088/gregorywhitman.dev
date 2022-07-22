@@ -1,0 +1,67 @@
+extends layout
+
+block layout-content
+    div.content#content
+        div.ga
+            div.ga-body
+                div.ga-sub-header
+                    p.label Possible Character Set:
+                    p.char-set ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+={}[];,.<>? 
+                div.ga-sub-header
+                    p.label Possible Combinations:
+                    // p.char-set 7.093585369945932e+36 
+                    p.char-set 7,093,585,369,945,932,000,000,000,000,000,000,000,000,000,000,000,000
+                div.ga-sub-header
+                    p.label Tried Combinations:
+                    p.char-set#triedCombinations 0
+                div.ga-header
+                    h1 Word Matching Genetic Algorithm
+                div.ga-wrapper
+                    div.ga-population
+                        //- lots of spans
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                        <span class="individual">afdhsadhsdhasfgj</span>
+                    div.ga-details
+                        div.ga-scentence
+                            <span class="scentence-heading">Scentence to find:</span>
+                            <span class="scentence-important">Greg is the best!!!</span>
+                        div.ga-best-scentence
+                            <span class="scentence-heading">Closest Match:</span>
+                            <span class="scentence-important">afdhsadhsdhasfgj</span>
+                        div.ga-stats
+                            //- Metrics about GA
+                            <span>Population Size: 200</span>
+                            <span>Genome Length: </span>
+                            <span>Generation: 1</span>
+                            <span>Max Fitness: 0%</span>
+                        div.ga-controls
+                            //- Start, Stop etc...
+                            button.btn.call-to-action.action#action Start
+                            button.btn.call-to-action.reset#reset Reset
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    script(src="/javascripts/wordmatching-ga-draw.js")
+    script(src="/javascripts/wordmatching-ga-func.js")
+    script(src="/javascripts/wordmatching-ga.js")
+    link(rel='stylesheet', href='/stylesheets/wordmatching-ga.css', type='text/css')

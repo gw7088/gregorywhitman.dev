@@ -20,7 +20,9 @@ function initHandlers(){
 
 
 
-
+/**
+ * Starts stop canvas code from running.
+ */
 function toggleActionClicked(){
     if($(this).hasClass('started')){ // If started. Steps to stop processing code.
         $(this).removeClass('started');

@@ -45,6 +45,7 @@ const
   indexRouter = require('./routes/index'),
   mainRouter = require('./routes/mainpage'),
   pathfindingGaRouter = require('./routes/pathfinding-ga'),
+  wordmatchingGaRouter = require('./routes/wordmatching-ga'),
   userRouter = require('./routes/user')
   ;
 
@@ -69,6 +70,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/main', mainRouter);
 app.use('/pathfinding-ga', pathfindingGaRouter);
+app.use('/wordmatching-ga', wordmatchingGaRouter);
 app.use('/user', userRouter);
 
 // catch 404 and forward to error handler

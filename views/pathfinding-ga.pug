@@ -1,26 +1,27 @@
 extends layout
 
 block layout-content
-    div.ga
-        div.ga-header
-            h1 Genetic Algorithm Pathfinding
-        div.ga-body-wrapper
-            div.ga-body
-                div.stats
-                    div.stat
-                        p <strong>Population Size: </strong> <span id="popSize"> </span>
-                    div.stat
-                        p <strong>Genome Length: </strong> <span id="genomeLength"> </span>
-                    div.stat
-                        p <strong>Generation: </strong> <span id="generation"> </span>
-                    div.stat
-                        p <strong>Avg Fitness: </strong> <span id="avgFitness"> </span>
-                    div.stat
-                        p <strong>Min Moves: </strong> <span id="minMoves"> </span>
-                div
-                    button.btn.call-to-action.action#action Start
-            div.ga-canvas
-                <canvas data-processing-sources="/javascripts/pathfinding-ga.pde" style="width: 80vw !important; height: 80vh !important;"></canvas>
+    div.content#content
+        div.ga
+            div.ga-header
+                h1 Genetic Algorithm Pathfinding
+            div.ga-body-wrapper
+                div.ga-body
+                    div.stats
+                        div.stat
+                            p <strong>Population Size: </strong> <span id="popSize"> </span>
+                        div.stat
+                            p <strong>Genome Length: </strong> <span id="genomeLength"> </span>
+                        div.stat
+                            p <strong>Generation: </strong> <span id="generation"> </span>
+                        div.stat
+                            p <strong>Avg Fitness: </strong> <span id="avgFitness"> </span>
+                        div.stat
+                            p <strong>Min Moves: </strong> <span id="minMoves"> </span>
+                    div
+                        button.btn.call-to-action.action#action Start
+                div.ga-canvas
+                    <canvas data-processing-sources="/javascripts/pathfinding-ga.pde" style="width: 80vw !important; height: 80vh !important;"></canvas>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>

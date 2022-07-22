@@ -115,16 +115,19 @@ function toggleMobileMenu(){
 function navBarFadeIn(){
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header-wrapper").style.top = "0";
-    } else {
-        if(!$('.hamburger-icon').hasClass('open')){
-            document.getElementById("header-wrapper").style.top = "-100px";
-        }
-    }
+    	var currentScrollPos = window.pageYOffset;
+		if (prevScrollpos > currentScrollPos) {
+			document.getElementById("header-wrapper").style.top = "0";
+			console.log('11');
+		} else 
+		{
+			console.log('22');
+        	if(!$('.hamburger-icon').hasClass('open')){
+            	document.getElementById("header-wrapper").style.top = "-100px";
+        	}
+   		}
         prevScrollpos = currentScrollPos;
-    }
+	}
 }
 
 
