@@ -79,7 +79,6 @@ function showToastError(msg,title){
 function initMainHandlers(){
     // Setups
     navBarFadeIn();
-
     // Interactions
     $('.hamburger-icon').click(toggleMobileMenu);
 }

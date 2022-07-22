@@ -46,7 +46,8 @@ const
   mainRouter = require('./routes/mainpage'),
   pathfindingGaRouter = require('./routes/pathfinding-ga'),
   wordmatchingGaRouter = require('./routes/wordmatching-ga'),
-  userRouter = require('./routes/user')
+  userRouter = require('./routes/user'),
+  notFoundRouter = require('./routes/notFound')
   ;
 
 // view engine setup
@@ -72,11 +73,13 @@ app.use('/main', mainRouter);
 app.use('/pathfinding-ga', pathfindingGaRouter);
 app.use('/wordmatching-ga', wordmatchingGaRouter);
 app.use('/user', userRouter);
+app.use('*', notFoundRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
+
 
 // error handler
 app.use(function(err, req, res, next) {
