@@ -83,7 +83,7 @@
   align-items: center;
   text-align: center;
 }
-#lname,
+#email,
 #fname,
 .modal-message{
   background: inherit;
@@ -98,7 +98,7 @@
   height: 40vh;
   width: 50vw;
 }
-.lname{
+.email{
   margin-left: 1rem;
 }
 .contact-modal-message{
@@ -563,7 +563,7 @@
     align-items: left;
     width: 50vw;
   }
-  .lname{
+  .email{
     margin-top: 1rem;
     margin-left: 0px;
   }

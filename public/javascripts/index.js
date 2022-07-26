@@ -46,10 +46,36 @@ function send_contact_mail(){
     let data = {};
     // Rip message contents from here...
     data.fname = $('#fname').val();
-    data.lname = $('#lname').val();
+    data.email = $('#email').val();
     data.message = $('#modal-message').val();
+
+    if(!validateContactInfo(data)) return;
+
     // Send data to server to be sent.
     socket.emit('send contact email',data);
+}
+
+
+
+/**
+ * 
+ * @param {Object} data Contains the information from the contact form.
+ */
+function validateContactInfo(data){
+    // Check name and message
+    if(data.fname=='' || data.message==''){
+        showToastError('Please enter a name and message');
+        return false;
+    }
+    // Check email
+    let email = data.email;
+    let emailFlag = email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    if(!emailFlag){
+        showToastError('Please enter a valid email... (So I can get back to you!)');
+        return false;
+    }
+    // Everything looks good.
+    return true;
 }
 
 
@@ -81,7 +107,7 @@ function clearAndCloseModal(){
     modal.style.display = "none";
     // Clear contact modal.
     $('#fname').val('');
-    $('#lname').val('');
+    $('#email').val('');
     $('#modal-message').val('');
 }
     

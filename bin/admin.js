@@ -41,12 +41,11 @@ module.exports = class Admin extends Utils{
             to: 'gwhitman55@gmail.com',
             from: 'gw@gregorywhitman.dev',
             subject: 'Message From gregorywhitman.dev site',
-            text: `${data.fname}
-                    ${data.lname}
+            text: `${data.fname} : ${data.email}
 
                     ${data.message}
                 `,
-            html: `<strong>${data.fname} : ${data.lname}</strong>
+            html: `<strong>${data.fname} : ${data.email}</strong>
                     <p>${data.message}</p>
                 `,
         }
