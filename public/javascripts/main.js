@@ -80,7 +80,20 @@ function initMainHandlers(){
     // Setups
     navBarFadeIn();
     // Interactions
-    $('.hamburger-icon').click(toggleMobileMenu);
+	$('.hamburger-icon').click(toggleMobileMenu);
+	// Init Bootstrap tooltips
+	$('[data-toggle="tooltip"]').tooltip({ trigger: "hover" });
+	// Check for click outside of menue.
+	$(document).mouseup(function(e){
+		var menu = $('#menu');
+		if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+			document.getElementById("menue").classList.remove("open"); // Close menu div
+			document.getElementById("content").classList.remove("open"); // Close content div
+			document.getElementById("hamburger-icon").classList.remove("open"); // Close hamburger
+			var header = document.getElementById("header-wrapper");
+			header.style.backgroundColor = "rgb(10 25 47 / 71%)";
+		}
+	});
 }
 
 
@@ -90,20 +103,20 @@ function initMainHandlers(){
  */
 function toggleMobileMenu(){
     // Check if menue is open.
-    if($(this).hasClass('open')){ // If open. Steps to close it.
+	if($(this).hasClass('open')){ // If open. Steps to close it.
         $(this).removeClass('open');
         document.getElementById("menue").classList.remove("open");
         document.getElementById("content").classList.remove("open");
         var header = document.getElementById("header-wrapper");
         header.style.backgroundColor = "rgb(10 25 47 / 71%)";
     }
-    else{ // If closes. Steps to open it.
+	else{ // If closed. Steps to open it.
         $(this).addClass('open');
         document.getElementById("menue").classList.add("open");
         document.getElementById("content").classList.add("open");
         var header = document.getElementById("header-wrapper");
         header.style.backgroundColor = "rgb(210 105 30 / 0%)";
-    }
+	}
 }
 
 
@@ -117,10 +130,8 @@ function navBarFadeIn(){
     	var currentScrollPos = window.pageYOffset;
 		if (prevScrollpos > currentScrollPos) {
 			document.getElementById("header-wrapper").style.top = "0";
-			console.log('11');
 		} else 
 		{
-			console.log('22');
         	if(!$('.hamburger-icon').hasClass('open')){
             	document.getElementById("header-wrapper").style.top = "-100px";
         	}

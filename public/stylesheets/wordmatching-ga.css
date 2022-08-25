@@ -111,7 +111,7 @@
 /**
   Media queries for large screens.
 */
-@media (max-width: 992px){
+@media (max-width: 992px), (max-height: 755px){
     .ga-body {
         overflow-y: visible;
     }

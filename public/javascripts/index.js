@@ -206,8 +206,8 @@ function jobSelector(){
                                 <li>Integrated NodeJS applications with AWS services such as S3 and cloudwatch.</li>
                                 <li>Built new features on top of the existing REST API.</li>
                                 <li>Gained hands on experience using AWS services such as EC2.</li>
-                                <li>Designed and built U/I that interacts and modifies data via APIs and SQL queries to assist team members with completing buisness tasks.</li>
-                                <li>Built multiple recurring emails using NodeJS and SendGrid that contained vital information about the buisnesses recent performance.</li>
+                                <li>Designed and built U/I that interacts and modifies data via APIs and SQL queries to assist team members with completing business tasks.</li>
+                                <li>Built multiple recurring emails using NodeJS and SendGrid that contained vital information about the businesses recent performance.</li>
                                 <li>Gained experience working with AWS services such as Gateway and Lambda.</li>
                                 <li>Maintained various NodeJS applications.</li>
                             </ul>
@@ -224,7 +224,7 @@ function jobSelector(){
                         <div class="job-body1">
                             <ul>
                                 <li>Bug fixes within internal/external facing dashboards.</li>
-                                <li>Wrote CRON jobs responsible for vital data collection, maintenece and manipulation.</li>
+                                <li>Wrote CRON jobs responsible for automatic data collection, maintenance and manipulation.</li>
                                 <li>Gained hands on experience with Bootstrap, Express, Pug and NodeJS.</li>
                                 <li>Gained hands on experience using AWS services such as EC2.</li>
                                 <li>Cleanly rendering data queried via databases and APIs for easy human visualization and consumption.</li>

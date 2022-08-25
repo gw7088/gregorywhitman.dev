@@ -24,6 +24,7 @@
   font-weight: 300;
 }
 .call-to-action:focus{
+  color: #64FFDA;
   box-shadow: none;
 }
 .call-to-action:hover{
@@ -229,12 +230,12 @@
   width: 750px;
   margin: 0 auto;
 }
-.carasel-outer{
+.carousel-outer{
   background:	#0a192f;
   padding: 20px;
   color: #99a4c2;
 }
-.carasel-inner{
+.carousel-inner{
   display: flex;
 }
 .tabs{
@@ -267,6 +268,7 @@
   font-size: .90rem;
 }
 .job-body1 {
+  font-size: 14px;
   margin-top: 1rem;
 }
 .job-body1 ul {
@@ -301,10 +303,13 @@
   font-weight: 700;
   font-size: 31px;
   color: #E6F1FF;
+  overflow-wrap: break-word;
 }
 .project-body{
   color: #99A4C2;
-
+}
+.project-footer{
+  display: flex;
 }
 .project-icon{
   margin: 1rem;
@@ -337,6 +342,12 @@
 }
 .project-link{
   margin: 1rem 2.25rem 0 0;
+  width: 26px;
+  height: 26px;
+  color: #ccd6f6;
+}
+.project-link-svg{
+  /* margin: 1rem 2.25rem 0 0; */
   width: 26px;
   height: 26px;
   color: #ccd6f6;
@@ -374,6 +385,8 @@
   background: #112240;
   box-shadow: 0px 4px 11px rgb(0 0 0 / 40%);
   transition: transform 200ms ease-in;
+  height: 290px;
+  max-height: 290px;
 }
 .extra-project:hover{
   transform: translateY(-10px);
@@ -382,12 +395,6 @@
 .extra-project-footer{
   margin: 0 0 2rem 0;
   position: relative;
-}
-.extra-project-title{
-  
-}
-.extra-project-body{
-  
 }
 .extra-project-tools{
   color: white;
@@ -530,7 +537,7 @@
   .work-experience{
     margin-bottom: 7vh;
   }
-  .carasel-inner {
+  .carousel-inner {
     flex-direction: column;
   }
   .tab-list ul li {
