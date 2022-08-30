@@ -86,10 +86,15 @@ function initMainHandlers(){
 	// Check for click outside of menue.
 	$(document).mouseup(function(e){
 		var menu = $('#menu');
-		if (!menu.is(e.target) && menu.has(e.target).length === 0) {
-			document.getElementById("menue").classList.remove("open"); // Close menu div
-			document.getElementById("content").classList.remove("open"); // Close content div
-			document.getElementById("hamburger-icon").classList.remove("open"); // Close hamburger
+		var open_close = $('#hamburger-icon');
+		var bar1 = $('.bar1');
+		var bar2 = $('.bar2');
+		var bar3 = $('.bar3');
+		if ( (!menu.is(e.target)) && !(open_close.is(e.target) || bar1.is(e.target) || bar2.is(e.target) || bar3.is(e.target)) ){
+			$(this).removeClass('open');
+			document.getElementById("menue").classList.remove("open");
+			document.getElementById("content").classList.remove("open");
+			document.getElementById("hamburger-icon").classList.remove("open");
 			var header = document.getElementById("header-wrapper");
 			header.style.backgroundColor = "rgb(10 25 47 / 71%)";
 		}
