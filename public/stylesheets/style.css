@@ -157,10 +157,11 @@ body {
   box-shadow: none;
   color: #64FFDA;
 }
-.resume:hover{
+.btn.resume:hover{
   background-color: #2c576999;
   color: #64ffda99;
   transition: 250ms ease-in;
+  border-color: inherit;
 }
 
 
