@@ -24,7 +24,8 @@ block layout-content
 				h1.hacker-text Hello, I'm
 				h1.big-heading Gregory Whitman
 				h1.secondary-text Full Stack Developer
-				button.btn.call-to-action#myBtn Contact Me
+				div(style="margin-top:2rem;")
+					a.btn-pixel#myBtn Contact Me
 
 
 		<!-- About Section --> 
@@ -84,7 +85,7 @@ block layout-content
 					div.project-title
 						h1 Genetic Algorithm Research
 					div.project-body
-						<p> Researching genetic algorithms <em>applied to pathfinding</em>, specifically the effect of Second Chance Mating within the selection portion of the algorithm. This project includes a visual demo, a presentation that dives into genetic algorithms, and finally a research paper that concludes my findings. If you find this project interesting, checkout another application of genetic algorithms <a href="/wordmatching-ga" class="mainLink"> here </a></p>
+						<p> Researching genetic algorithms <em>applied to pathfinding</em>, specifically the effect of Second Chance Mating within the selection portion of the algorithm. This project includes a visual demo, a presentation that dives into genetic algorithms, and finally a research paper that concludes my findings. If you find this project interesting, checkout another application of genetic algorithms <a href="/wordmatching-ga" class="mainLink" target="_blank"> here </a>.</p>
 						ul.project-tools
 							li Java
 							li Processing
@@ -201,6 +202,18 @@ block layout-content
 									li p5.js
 						div.project.extra-project
 							div.project-footer.extra-project-footer
+								div.project-link(style="margin-bottom: 20px;")
+									//- img(src="/images/best_player_spritesheet_32x34.gif" width="32px" height="34px")
+									//- img(src="/images/best_player_spritesheet_32x34 copy.gif" width="256xp" height="272px")
+									img(src="/images/best_player_spritesheet_32x34 copy.gif" width="62px" height="68px")
+							div.project-title.extra-project-title
+								h1 Pixel Character Art/Animation
+							div.project-body.extra-project-body
+								<p> Simple 2D character looping through its different movement frames. </p>
+								ul.project-tools.extra-project-tools
+									li Pixilart
+						div.project.extra-project
+							div.project-footer.extra-project-footer
 								div.project-link
 									a(href="https://github.com/gw7088/simple_shell_script" target="_blank" data-toggle="tooltip" title="GitHub")
 										<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link-svg">
@@ -269,7 +282,8 @@ block layout-content
 									li Java
 									li LibGDX
 			div.project-see-more
-				button.btn.call-to-action See More?
+				div(style="margin-top:2rem;")
+					a.btn-pixel See More?
 
 
 		<!-- Contact Me Section --> 
@@ -278,7 +292,8 @@ block layout-content
 				h1 Reach out to me!
 			div.contact-body
 				<p> My inbox is always open. Let me know if you have any questions. I’ll do my best to get back to you! </p>
-			button.btn.call-to-action#myBtn2(data-toggle="tooltip" data-placement="bottom" title="Send me an email!") Say Hello!
+			div(style="margin-top:2rem;")
+					a.btn-pixel#myBtn2(data-toggle="tooltip" trigger="hover" data-placement="bottom" title="Send me an email!") Say Hello!
 
 
 		<!-- Footer Section --> 

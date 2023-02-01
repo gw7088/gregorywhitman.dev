@@ -82,7 +82,7 @@ body {
   font-family: 'Coda', cursive;
   color: #64ffda
 }
-.nav ul a:hover,
+.nav ul a.mainLink:hover,
 .menue .mobile-menue li a:hover{
   color: #64ffda99;
   text-decoration: none;

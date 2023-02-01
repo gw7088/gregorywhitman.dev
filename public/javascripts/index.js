@@ -13,8 +13,9 @@ function initHandlers(){
     // Interactions
     // $('.hamburger-icon').click(toggleMobileMenu);
     $('.job-selector').click(jobSelector);
-    $('.project-see-more .call-to-action').click(seeMoreProjectsClicked);
+    $('.project-see-more .btn-pixel').click(seeMoreProjectsClicked);
     $('.contact-send').click(send_contact_mail);
+    $('[data-toggle="tooltip"]').tooltip( {trigger : 'hover'} );
 }
 
 
@@ -169,9 +170,13 @@ function setupModalFunc(){
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
         modal.style.display = "block";
+        // Hide tooltips
+        setTimeout(() => { $('.tooltip').hide(); }, 50);
     }
     btn2.onclick = function() {
         modal.style.display = "block";
+        // Hide tooltips
+        setTimeout(() => { $('.tooltip').hide(); }, 50);
     }
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {

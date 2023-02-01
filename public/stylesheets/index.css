@@ -33,6 +33,45 @@
   transition: 250ms ease-in;
   border-color: inherit;
 }
+/** Call to action button animation */
+a.btn-pixel{
+  position: relative;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  /* transition: 0.5s; */
+  margin: 15px;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  font-size: larger;
+  font-family: 'Coda', cursive;
+  font-weight: 300;
+  border-radius: 5px;
+}
+a.btn-pixel:hover{
+  background: #64FFDA url('/images/pixel.png');
+  transition-delay: 0.8s;
+  background-size: 180px;
+  animation: Animate 0.8s steps(8) forwards;
+  color: #0a192f;
+}
+a.btn-pixel:nth-child(2):hover{
+  background: #64FFDA url('/images/pixel.png');
+  transition-delay: 0.8s;
+  background-size: 180px;
+  animation: Animate 0.8s steps(8) forwards;
+  color: #0a192f;
+}
+@keyframes Animate{
+  0%{
+      background-position-y: 0;
+  }
+  100%{
+      background-position-y: -480px;
+  }
+}
 
 
 
@@ -246,6 +285,7 @@
 .tab-list ul {
   list-style: none;
   padding: 0px;
+  margin-top: 1rem;
 }
 .tab-list ul li {
   list-style: none;
@@ -376,7 +416,7 @@
 }
 .extra-projects-wrapper{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   position: relative;
   justify-content: center;
   max-width: 1200px;
@@ -386,8 +426,11 @@
   background: #112240;
   box-shadow: 0px 4px 11px rgb(0 0 0 / 40%);
   transition: transform 200ms ease-in;
-  height: 290px;
-  max-height: 290px;
+  /* height: 290px;
+  max-height: 290px; */
+  height: 435px;
+  max-height: 435px;
+  /* height: fit-content; */
 }
 .extra-project:hover{
   transform: translateY(-10px);
@@ -547,7 +590,7 @@
     border-left-style: none;
   }
   .tabs {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 }
@@ -577,5 +620,16 @@
   }
   .contact-modal-message {
     margin: 2rem;
+  }
+  #email, #fname{
+    width: 50vw;
+  }
+
+
+  /**
+    Extra projects
+  */
+  .extra-project{
+    height: fit-content;
   }
 }
