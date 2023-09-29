@@ -7,7 +7,9 @@ const
     uidgen = new UIDGenerator(),
     path = require('path'),
     fs = require('fs'),
-    sgMail = require('@sendgrid/mail')
+    sgMail = require('@sendgrid/mail'),
+    AWS = require('aws-sdk'),
+    nodemailer = require('nodemailer')
 ;
 
 // Set sendGrid Creds
@@ -30,33 +32,53 @@ module.exports = class Admin extends Utils{
         return callback(options);
     }
 
-    send_contact_email(data, callback){
+    async send_contact_email(data, callback){
         let self=this;
         if (typeof callback!='function') callback = function(){};
 
         // console.log('Message contents');
         // console.log(data);
-        const msg = {
-            // to: 'gw@gregorywhitman.dev',
-            to: 'gwhitman55@gmail.com',
-            from: 'gw@gregorywhitman.dev',
-            subject: 'Message From gregorywhitman.dev site',
-            text: `${data.fname} : ${data.email}
+        // const msg = {
+        //     // to: 'gw@gregorywhitman.dev',
+        //     to: 'gwhitman55@gmail.com',
+        //     from: 'gw@gregorywhitman.dev',
+        //     subject: 'Message From gregorywhitman.dev site',
+        //     text: `${data.fname} : ${data.email}
 
-                    ${data.message}
-                `,
-            html: `<strong>${data.fname} : ${data.email}</strong>
-                    <p>${data.message}</p>
-                `,
-        }
-        sgMail.send(msg).then(() => {
-            // console.log('Email sent');
-            return callback(self.simpleSuccess('Successfully sent contact email'));
-        })
-        .catch((error) => {
-            // console.error(error);
-            // console.log(error.response.body);
-            return callback(self.simpleFail('Failed sending contact email'));
+        //             ${data.message}
+        //         `,
+        //     html: `<strong>${data.fname} : ${data.email}</strong>
+        //             <p>${data.message}</p>
+        //         `,
+        // }
+
+        let transporter = nodemailer.createTransport({
+            host: "email-smtp.us-east-1.amazonaws.com",
+            port: 587,
+            secure: false,
+            auth:{
+                user: process.env.NODEMAILER_AWS_SMTP_USER,
+                pass: process.env.NODEMAILER_AWS_SMTP_PASS,
+            },
+        });
+
+        // Define email data
+        const mailOptions = {
+            from: 'gwhitman55@gmail.com', // Sender's email address
+            to: 'gwhitman55@gmail.com', // Recipient's email address
+            subject: 'Message From gregorywhitman.dev site', // Subject line
+            text: `<strong>${data.fname} : ${data.email}</strong><p>${data.message}</p>`
+        };
+
+        // Send the email
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error('wt', error);
+                return callback(self.simpleFail('Failed sending contact email'));
+            } else {
+                console.log('Email sent:', info.response);
+                return callback(self.simpleSuccess('Successfully sent contact email'));
+            }
         });
     }
 }

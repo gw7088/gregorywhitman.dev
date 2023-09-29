@@ -201,20 +201,19 @@ function jobSelector(){
     let array = [`<div class="job1">
                         <div class="job-title1">
                             <div class="job-header1">
-                                <div class="h2"><span class="job-header-title">Full Stack Web Developer<span class="job-header-company"> @ Digital Media Solutions</span></span></div>
+                                <div class="h2"><span class="job-header-title">Full Stack Developer<span class="job-header-company"> @ Digital Media Solutions</span></span></div>
                             </div>
                             <div class="job-header1-sub"><span>February 2021 - Present</span></div>
                         </div>
                         <div class="job-body1">
                             <ul>
                                 <li>Designed and built a system to track statistical anomalies across various business metrics to alert proper team members to investigate the cause of these anomalies.</li>
-                                <li>Integrated NodeJS applications with AWS services such as S3 and cloudwatch.</li>
+                                <li>Integrated NodeJS applications with AWS services such as S3 and Cloudwatch.</li>
                                 <li>Built new features on top of the existing REST API.</li>
-                                <li>Gained hands on experience using AWS services such as EC2.</li>
+                                <li>Gained hands on experience using AWS services such as EC2, Gateway, Lambda and more.</li>
                                 <li>Designed and built U/I that interacts and modifies data via APIs and SQL queries to assist team members with completing business tasks.</li>
                                 <li>Built multiple recurring emails using NodeJS and SendGrid that contained vital information about the businesses recent performance.</li>
-                                <li>Gained experience working with AWS services such as Gateway and Lambda.</li>
-                                <li>Maintained various NodeJS applications.</li>
+                                <li>Responsible for maintaining various NodeJS applications.</li>
                             </ul>
                         </div>
                     </div>`,
