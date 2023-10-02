@@ -8,7 +8,6 @@ const
     path = require('path'),
     fs = require('fs'),
     sgMail = require('@sendgrid/mail'),
-    AWS = require('aws-sdk'),
     nodemailer = require('nodemailer')
 ;
 
@@ -67,7 +66,10 @@ module.exports = class Admin extends Utils{
             from: 'gwhitman55@gmail.com', // Sender's email address
             to: 'gwhitman55@gmail.com', // Recipient's email address
             subject: 'Message From gregorywhitman.dev site', // Subject line
-            text: `<strong>${data.fname} : ${data.email}</strong><p>${data.message}</p>`
+            html: `<strong>${data.fname} : ${data.email}</strong><p>${data.message}</p>`,
+            text: `${data.fname} : ${data.email}
+                    ${data.message}`
+
         };
 
         // Send the email
