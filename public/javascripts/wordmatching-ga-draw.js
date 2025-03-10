@@ -153,7 +153,7 @@ function draw() {
       $('.ga-best-scentence').html(`<span class="scentence-heading">Closest Match: </span><span class="scentence-important">${maxIndiv.scentence.join('')}</span>`);
       $('.ga-stats').html(statsHTML);
       $('.ga-population').html(populationHTML);
-      $('#triedCombinations').html('~ '+generation*genomeSize);
+      $('#triedCombinations').html('~ '+generation*populationSize);
     }
   }
 }
