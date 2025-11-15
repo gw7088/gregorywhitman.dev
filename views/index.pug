@@ -80,6 +80,35 @@ block layout-content
 				div.section-header#project-header.fade-in
 					h1.header-text What I've Built
 				div.project.slide-in.from-right
+					div.project-body-wrapper
+						div.project-content
+							div.project-sm-header
+								span Featured Project
+							div.project-title
+								h1 Zombie Perk Bottle Display
+							div.project-body
+								div.project-body-desc
+									<p> Scratching a creative itch, I decided to build a display for my favorite games. "Call Of Duty: Zombies" and the iconic Perk Machienes.</p>
+									ul.project-tools
+										li Samll Electrics
+										li Soldering
+										li Circuts
+										li Breadboarding
+										li Audio Editing
+										li Arduino Code
+							div.project-footer
+								div.project-link
+									a(href="https://gregorywhitman.dev/zombie-perk-bottles" target="_blank" data-toggle="tooltip" data-placement="top" title="Simple Showcase")
+										<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link project-link-svg">
+											<title>External Link</title>
+											<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+											<polyline points="15 3 21 3 21 9"></polyline>
+											<line x1="10" y1="14" x2="21" y2="3"></line>
+										</svg>	
+						div.project-body-img
+							img(src='/images/perks/final_product_dark.jpg', alt='Zombie Perk Bottle')
+
+				div.project.slide-in.from-right
 					div.project-sm-header
 						span Featured Project
 					div.project-title
@@ -147,30 +176,6 @@ block layout-content
 									<polyline points="15 3 21 3 21 9"></polyline>
 									<line x1="10" y1="14" x2="21" y2="3"></line>
 								</svg>
-				div.project.slide-in.from-right
-					div.project-sm-header
-						span Featured Project
-					div.project-title
-						h1 gregorywhitman.dev
-					div.project-body
-						<p> My personal website built from scratch that acts as a place to store some of my recent and old projects as well as showcase some of my skills. </p>
-						ul.project-tools
-							li AWS EC2
-							li AWS Route 53
-							li Certbot
-							li Bootstrap
-							li Pug
-							li NodeJS
-							li Express
-							li Nginx
-							li Pm2
-					div.project-footer
-						div.project-link
-							a(href="https://github.com/gw7088/gregorywhitman.dev" target="_blank" data-toggle="tooltip" data-placement="top" title="GitHub")
-								<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github project-link-svg">
-									<title>GitHub</title>
-									<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-								</svg>			
 				<!-- Extra Projects Section -->
 				div.more-projects#more-projects
 					div.extra-projects-heading

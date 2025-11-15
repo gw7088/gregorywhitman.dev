@@ -1,5 +1,7 @@
 'use strict'
 
+const mail = require('@sendgrid/mail');
+
 const
     Utils = require('./utils'),
     request = require('request'),
@@ -63,7 +65,7 @@ module.exports = class Admin extends Utils{
 
         // Define email data
         const mailOptions = {
-            from: 'gwhitman55@gmail.com', // Sender's email address
+            from: 'gregwhitmandev@gmail.com', // Sender's email address
             to: 'gwhitman55@gmail.com', // Recipient's email address
             subject: 'Message From gregorywhitman.dev site', // Subject line
             html: `<strong>${data.fname} : ${data.email}</strong><p>${data.message}</p>`,

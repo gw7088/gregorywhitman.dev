@@ -47,6 +47,7 @@ const
   pathfindingGaRouter = require('./routes/pathfinding-ga'),
   wordmatchingGaRouter = require('./routes/wordmatching-ga'),
   userRouter = require('./routes/user'),
+  zombiePerkProject = require('./routes/zombiePerkProject'),
   notFoundRouter = require('./routes/notFound')
   ;
 
@@ -73,6 +74,7 @@ app.use('/main', mainRouter);
 app.use('/pathfinding-ga', pathfindingGaRouter);
 app.use('/wordmatching-ga', wordmatchingGaRouter);
 app.use('/user', userRouter);
+app.use('/zombie-perk-bottles', zombiePerkProject);
 app.use('*', notFoundRouter);
 
 // catch 404 and forward to error handler

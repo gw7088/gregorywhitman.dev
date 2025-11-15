@@ -349,6 +349,14 @@ a.btn-pixel:nth-child(2):hover{
 .project-body{
   color: #99A4C2;
 }
+.project-body-wrapper{
+  display: flex;
+}
+.project-body-img img{
+  width: 155px;
+  height: 222px;
+  border-radius: 5px;
+}
 .project-footer{
   display: flex;
 }
@@ -623,6 +631,13 @@ a.btn-pixel:nth-child(2):hover{
   }
   #email, #fname{
     width: 50vw;
+  }
+
+  /**
+    Projects
+  */
+  .project-body-img{
+    display: none;
   }
 
 

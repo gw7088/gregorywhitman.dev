@@ -1,0 +1,55 @@
+/**
+    GENERIC
+*/
+#content{
+    color: #CCD6F6;
+}
+
+
+
+/**
+    INTRO STYLING
+*/
+.project-title{
+    text-align: center;
+}
+.project-header{
+    margin-top: 10rem;
+    font-family: 'Murecho', sans-serif;
+    font-weight: bold;
+    font-size: clamp(26px, 5vw, 32px);
+    color: #CCD6F6;
+    text-transform: none;
+}
+
+
+
+/**
+    IMAGES
+*/
+.image-item{
+    width: 150px;
+    height: 150px;
+}
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 0;
+}
+.image-stack img {
+    width: 253px;
+    height: 447px;
+    border-radius: 12px;
+}
+.image-stack video {
+  max-width: 80%;
+  width: 23%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover; /* keeps aspect ratio clean */
+}
+
+
+

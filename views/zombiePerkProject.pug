@@ -1,0 +1,37 @@
+extends layout
+
+block layout-content
+    div.content#content
+        div.project-title
+            div.project-header
+                h1 Zombie Perk Bottle Display
+        //- Image grid section
+        div.image-stack
+            img(src='/images/perks/final_product_dark.jpg', alt='Zombie Perk Bottle')
+            img(src='/images/perks/arduino_with_buttons.jpg', alt='Zombie Perk Bottle')
+            video(controls, muted, loop)
+                source(src='/images/perks/building_sound_files.mp4', type='video/mp4')
+                | Your browser does not support the video tag.
+            video(controls, muted, loop)
+                source(src='/images/perks/test_dfPlayermini.mp4', type='video/mp4')
+                | Your browser does not support the video tag.
+            video(controls, muted, loop)
+                source(src='/images/perks/test_button_sounds_play.mp4', type='video/mp4')
+                | Your browser does not support the video tag.
+            video(controls, muted, loop)
+                source(src='/images/perks/test_board_and_buttons_with_speaker.mp4', type='video/mp4')
+                | Your browser does not support the video tag.
+            img(src='/images/perks/dfPlayerMini_soldered.jpg', alt='Zombie Perk Bottle')
+            img(src='/images/perks/board_all_soldered.jpg', alt='Zombie Perk Bottle')
+            img(src='/images/perks/buttons_mounted_off.jpg', alt='Zombie Perk Bottle')
+            img(src='/images/perks/display_case_with_buttons.jpg', alt='Zombie Perk Bottle' style="transform: rotate(270deg);")
+            img(src='/images/perks/case_guts.jpg', alt='Zombie Perk Bottle')
+            video(controls, muted, loop)
+                source(src='/images/perks/highPowered_led_test.mp4', type='video/mp4')
+                | Your browser does not support the video tag.
+            video(controls, muted, loop)
+                source(src='/images/perks/case_with_leds_wired.mp4', type='video/mp4')
+                | Your browser does not support the video tag.            
+
+    link(rel='stylesheet', href='/stylesheets/zombiePerkProject.css', type='text/css')
+    script(src="/javascripts/zombiePerkProject.js")
