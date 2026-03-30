@@ -356,6 +356,7 @@ a.btn-pixel:nth-child(2):hover{
   width: 155px;
   height: 222px;
   border-radius: 5px;
+  margin-left: 15px;
 }
 .project-footer{
   display: flex;

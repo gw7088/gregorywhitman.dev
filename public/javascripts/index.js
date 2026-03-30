@@ -201,38 +201,53 @@ function jobSelector(){
     let array = [`<div class="job1">
                         <div class="job-title1">
                             <div class="job-header1">
-                                <div class="h2"><span class="job-header-title">Full Stack Developer<span class="job-header-company"> @ Digital Media Solutions</span></span></div>
+                                <div class="h2"><span class="job-header-title">Full Stack Developer (Contract)<span class="job-header-company"> @ Intentwave</span></span></div>
                             </div>
-                            <div class="job-header1-sub"><span>February 2021 - Present</span></div>
+                            <div class="job-header1-sub"><span>January 2026 - Present</span></div>
                         </div>
                         <div class="job-body1">
                             <ul>
-                                <li>Developed and implemented a sophisticated anomaly tracking system, analyzing diverse business metrics to promptly notify relevant team members to investigate root causes.</li>
-                                <li>Helped build an Ad network capable of delivering billions of ads daily. System was capable of delivering targeted ads based on tracked user data. Also worked on ad optimization which automatically calculated best performing ads to deliver more often.</li>
-                                <li>Leveraged Cloudflare services to build an automated threat detection system by leveraging an AI LLM and Puppeteer to evaluate websites for potential threats using content classification.</li>
-                                <li>Integrated NodeJS applications with AWS services, including Gateway, Lambda, S3 and CloudWatch, optimizing operational efficiency and enhancing data management capabilities.</li>
-                                <li>Expanded existing REST API functionality by designing and building new features to meet evolving business requirements.</li>
-                                <li>Designed and implemented user-friendly UI that interacted with APIs and executed SQL queries, streamlining team members' workflow for seamless completion of business tasks.</li>
-                                <li>Utilized NodeJS and SendGrid to construct and automate multiple recurring emails, conveying crucial insights into the businesses' recent performance.</li>
-                                <li>Maintained and updated multiple NodeJS applications, ensuring smooth and reliable operation.</li>
+                                <li>Building a production React dashboard, architecting component structure, state management, and API integration patterns for a data-intensive internal tooling platform.</li>
+                                <li>Designing and developing a PHP REST API backend to support the dashboard, including endpoint design, authentication, and database query optimization.</li>
+                                <li>Designed and deployed a real-world page and session tracking system using WebSockets and Cloudflare Durable Objects on Cloudflare infrastructure, handling millions of concurrent users daily.</li>
+                                <li>Collaborating closely with stakeholders to translate business requirements into technical solutions, owning features end-to-end from architecture through deployment.</li>
+                                <li>Conducting code reviews and contributing to engineering standards and best practices across the team.</li>
                             </ul>
                         </div>
                     </div>`,
                     `<div class="job1">
                         <div class="job-title1">
                             <div class="job-header1">
-                                <div class="h2"><span class="job-header-title">Jr. Web Developer <span class="job-header-company">@
-                                            PushPros</span></span></div>
+                                <div class="h2"><span class="job-header-title">Full Stack Developer<span class="job-header-company"> @ Digital Media Solutions (Aimtell)</span></span></div>
+                            </div>
+                            <div class="job-header1-sub"><span>February 2021 - December 2025</span></div>
+                        </div>
+                        <div class="job-body1">
+                            <ul>
+                                <li>Maintained an ad delivery network capable of processing billions of targeted ad impressions daily, incorporating real-time optimization logic to automatically promote best-performing ads.</li>
+                                <li>Maintained a high-throughput Kafka pipeline for queuing and delivering billions of push notifications per day, designing producers, consumers, and retry/dead-letter strategies for reliability at scale.</li>
+                                <li>Leveraged AWS Lambda, API Gateway, S3, and CloudWatch to build serverless microservices, improving operational efficiency and decoupling system components.</li>
+                                <li>Built an automated threat detection platform using Cloudflare Workers, an AI/LLM classifier, and Puppeteer to crawl and evaluate websites for malicious content.</li>
+                                <li>Expanded and maintained REST API surface area, designing new endpoints and integrating third-party services to support evolving product requirements.</li>
+                                <li>Designed internal admin UIs that interfaced with APIs and executed SQL queries, enabling non-technical team members to manage business operations efficiently.</li>
+                                <li>Built automated reporting pipelines using Node.js and SendGrid, delivering scheduled performance insights across multiple business units.</li>
+                            </ul>
+                        </div>
+                    </div>`,
+                    `<div class="job1">
+                        <div class="job-title1">
+                            <div class="job-header1">
+                                <div class="h2"><span class="job-header-title">Jr. Web Developer<span class="job-header-company"> @ PushPros</span></span></div>
                             </div>
                             <div class="job-header1-sub"><span>January 2020 - February 2021</span></div>
                         </div>
                         <div class="job-body1">
                             <ul>
-                                <li>Wrote CRON jobs responsible for vital data collection, maintenance and manipulation.</li>
-                                <li>Familiarity with front-end technologies, including Pug templates, for clean data rendering and enhanced data visualization.</li>
-                                <li>Cleanly rendering data queried via databases and APIs for easy human visualization and consumption.</li>
-                                <li>Excellent problem-solving and communication skills, demonstrated through collaborating with the lead software engineer on end-to-end feature development.</li>
-                                <li>Proven ability to write effective UI tests to ensure software quality and robustness.</li>
+                                <li>Developed an anomaly detection system that continuously analyzed business metrics and triggered real-time alerts to the appropriate team members for investigation.</li>
+                                <li>Wrote CRON jobs responsible for critical data collection, transformation, and maintenance tasks.</li>
+                                <li>Built front-end interfaces using Pug templates for clean rendering and visualization of data sourced from databases and APIs.</li>
+                                <li>Collaborated with the lead engineer on end-to-end feature development, from requirements through QA.</li>
+                                <li>Wrote automated UI tests to validate software quality and prevent regressions.</li>
                             </ul>
                         </div>
                     </div>`
